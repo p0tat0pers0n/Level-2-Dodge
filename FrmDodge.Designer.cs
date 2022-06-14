@@ -40,6 +40,10 @@ namespace Level_2_Dodge
             this.label4 = new System.Windows.Forms.Label();
             this.LblLives = new System.Windows.Forms.Label();
             this.LblName = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.MnuStart = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnlGame
@@ -53,12 +57,10 @@ namespace Level_2_Dodge
             // 
             // TmrPlanet
             // 
-            this.TmrPlanet.Enabled = true;
             this.TmrPlanet.Tick += new System.EventHandler(this.TmrPlanet_Tick);
             // 
             // TmrShip
             // 
-            this.TmrShip.Enabled = true;
             this.TmrShip.Interval = 50;
             this.TmrShip.Tick += new System.EventHandler(this.TmrShip_Tick);
             // 
@@ -120,7 +122,7 @@ namespace Level_2_Dodge
             this.LblLives.Name = "LblLives";
             this.LblLives.Size = new System.Drawing.Size(20, 24);
             this.LblLives.TabIndex = 3;
-            this.LblLives.Text = "3";
+            this.LblLives.Text = "5";
             // 
             // LblName
             // 
@@ -130,6 +132,31 @@ namespace Level_2_Dodge
             this.LblName.Name = "LblName";
             this.LblName.Size = new System.Drawing.Size(100, 20);
             this.LblName.TabIndex = 1;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MnuStart,
+            this.MnuStop});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(634, 24);
+            this.menuStrip1.TabIndex = 7;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // MnuStart
+            // 
+            this.MnuStart.Name = "MnuStart";
+            this.MnuStart.Size = new System.Drawing.Size(43, 20);
+            this.MnuStart.Text = "Start";
+            this.MnuStart.Click += new System.EventHandler(this.MnuStart_Click);
+            // 
+            // MnuStop
+            // 
+            this.MnuStop.Name = "MnuStop";
+            this.MnuStop.Size = new System.Drawing.Size(43, 20);
+            this.MnuStop.Text = "Stop";
+            this.MnuStop.Click += new System.EventHandler(this.MnuStop_Click);
             // 
             // FrmDodge
             // 
@@ -144,13 +171,17 @@ namespace Level_2_Dodge
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PnlGame);
+            this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmDodge";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dodge";
             this.Load += new System.EventHandler(this.FrmDodge_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmDodge_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmDodge_KeyUp);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,6 +199,9 @@ namespace Level_2_Dodge
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label LblLives;
         private System.Windows.Forms.TextBox LblName;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem MnuStart;
+        private System.Windows.Forms.ToolStripMenuItem MnuStop;
     }
 }
 
